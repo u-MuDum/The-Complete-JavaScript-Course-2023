@@ -85,4 +85,28 @@
 // const adi2 = prompt("Lütfen adınızı giriniz");
 // alert(emekliligeKalan(dogumYili2, adi2));
 
-// FUNCTION İÇİNDE FUNCTION
+// FUNCTION İÇİNDE FUNCTION KONUSUNA İLERİDE TEKRAR BAK!!!!!!!!!!!!
+
+// CHALLENGE #5
+
+const ortHesapla = (sayi1, sayi2, sayi3) => {
+  const ort1 = (sayi1 + sayi2 + sayi3) / 3;
+  return ort1;
+};
+const scoreDolphins = ortHesapla(96, 108, 89);
+
+const scoreKoalas = ortHesapla(88, 91, 110);
+
+if (scoreDolphins > scoreKoalas) {
+  console.log(
+    `Dolphins win the trophy. (${Math.floor(scoreDolphins)} vs ${Math.floor(
+      scoreKoalas
+    )})`
+  );
+} else if (scoreDolphins < scoreKoalas) {
+  console.log(
+    `Koalas win the trophy. (${Math.floor(scoreDolphins)} vs ${Math.floor(
+      scoreKoalas
+    )})`
+  );
+} else console.log("Both win the trophy");
