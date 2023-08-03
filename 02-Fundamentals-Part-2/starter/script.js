@@ -151,3 +151,14 @@
 
 // const total = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]];
 // console.log(total);
+
+// OBJECT
+
+const müsteri = {
+  ad: "Mustafa",
+  soyad: "Duman",
+  TC: 4123123817,
+  adres: "mahallesi sokak no",
+  cari: true,
+};
+console.log(müsteri);
