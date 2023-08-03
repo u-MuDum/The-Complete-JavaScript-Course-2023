@@ -154,11 +154,23 @@
 
 // OBJECT
 
-const müsteri = {
+const musteri = {
   ad: "Mustafa",
   soyad: "Duman",
   TC: 4123123817,
   adres: "mahallesi sokak no",
   cari: true,
+  friends: ["Ahmet", "Mehmet", "Ali"],
 };
-console.log(müsteri);
+console.log(musteri);
+console.log(musteri.TC);
+console.log(musteri["TC"]);
+
+musteri.job = "engineer";
+musteri["twitter"] = "@m_duman";
+console.log(musteri);
+
+//Challenge (object çağırma)
+console.log(
+  `Mustafa'nın en sevdiği arkadaşı ${musteri.friends[0]}'dir. ve toplam ${musteri.friends.length} arkadaşı vardır.`
+);
