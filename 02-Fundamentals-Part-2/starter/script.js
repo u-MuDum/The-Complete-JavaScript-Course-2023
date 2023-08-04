@@ -154,23 +154,29 @@
 
 // OBJECT
 
-const musteri = {
-  ad: "Mustafa",
-  soyad: "Duman",
-  TC: 4123123817,
-  adres: "mahallesi sokak no",
-  cari: true,
-  friends: ["Ahmet", "Mehmet", "Ali"],
-};
-console.log(musteri);
-console.log(musteri.TC);
-console.log(musteri["TC"]);
+// const musteri = {
+//   ad: "Mustafa",
+//   soyad: "Duman",
+//   TC: 4123123817,
+//   adres: "mahallesi sokak no",
+//   cari: true,
+//   friends: ["Ahmet", "Mehmet", "Ali"],
+// };
+// console.log(musteri);
+// console.log(musteri.TC);
+// console.log(musteri["TC"]);
 
-musteri.job = "engineer";
-musteri["twitter"] = "@m_duman";
-console.log(musteri);
+// musteri.job = "engineer";
+// musteri["twitter"] = "@m_duman";
+// console.log(musteri);
 
-//Challenge (object çağırma)
-console.log(
-  `Mustafa'nın en sevdiği arkadaşı ${musteri.friends[0]}'dir. ve toplam ${musteri.friends.length} arkadaşı vardır.`
-);
+// //Challenge (object çağırma)
+
+// console.log(
+//   `Mustafa'nın en sevdiği arkadaşı ${musteri.friends[0]}'dir. ve toplam ${musteri.friends.length} arkadaşı vardır.`
+// );
+
+// for (let i = 1; i <= 5; i++) {
+//   const liste = [prompt("isim girin")];
+//   console.log(liste);
+// }
