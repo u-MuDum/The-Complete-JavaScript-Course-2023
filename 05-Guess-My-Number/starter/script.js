@@ -16,7 +16,7 @@ document.querySelector(".check").addEventListener("click", function () {
 
   //sayı girilmezse
   if (!guess) {
-    document.querySelector(".message").textContent = "No number";
+    document.querySelector(".message").textContent = "❌ No number";
 
     //doğru tahmin edilirse
   } else if (guess === secretNumber) {
@@ -28,22 +28,10 @@ document.querySelector(".check").addEventListener("click", function () {
       highscore = score;
     }
     document.querySelector(".highscore").textContent = highscore;
-
-    //aşağı tahmin edilirse
-  } else if (guess < secretNumber) {
+  } else if (guess !== secretNumber) {
     if (score > 1) {
-      document.querySelector(".message").textContent = "📉 Too low !";
-      score--;
-      document.querySelector(".score").textContent = score;
-    } else {
-      document.querySelector(".message").textContent = "🧨 You lost the game";
-      document.querySelector(".score").textContent = 0;
-    }
-
-    //yukarı tahmin edilirse
-  } else if (guess > secretNumber) {
-    if (score > 1) {
-      document.querySelector(".message").textContent = "📈 Too high !";
+      document.querySelector(".message").textContent =
+        guess < secretNumber ? "📉 Too low !" : "📈 Too high !";
       score--;
       document.querySelector(".score").textContent = score;
     } else {
@@ -51,6 +39,28 @@ document.querySelector(".check").addEventListener("click", function () {
       document.querySelector(".score").textContent = 0;
     }
   }
+  //aşağı tahmin edilirse
+  // else if (guess < secretNumber) {
+  //   if (score > 1) {
+  //     document.querySelector(".message").textContent = "📉 Too low !";
+  //     score--;
+  //     document.querySelector(".score").textContent = score;
+  //   } else {
+  //     document.querySelector(".message").textContent = "🧨 You lost the game";
+  //     document.querySelector(".score").textContent = 0;
+  //   }
+
+  //   //yukarı tahmin edilirse
+  // } else if (guess > secretNumber) {
+  //   if (score > 1) {
+  //     document.querySelector(".message").textContent = "📈 Too high !";
+  //     score--;
+  //     document.querySelector(".score").textContent = score;
+  //   } else {
+  //     document.querySelector(".message").textContent = "🧨 You lost the game";
+  //     document.querySelector(".score").textContent = 0;
+  //   }
+  // }
 });
 
 document.querySelector(".again").addEventListener("click", function () {
